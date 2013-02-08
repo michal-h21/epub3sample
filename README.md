@@ -16,6 +16,6 @@ Contents
   In this stage, emphasis is placed on correct document structure, there is only default `tex4ht` styling and formatting.
   Particular `epub3` features used are footnotes and `mathml` math.
   
-  **Compiling**
-  
+**Compiling**
+       
     tex4ebook -c hej -u -f epub3 hsmmt10t.tex
