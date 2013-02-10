@@ -96,6 +96,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -epub-hyphens: auto;
   hyphens: auto;
   hyphenate-after: 3;
   hyphenate-before: 3;
