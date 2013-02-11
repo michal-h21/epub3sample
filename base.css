@@ -1,3 +1,4 @@
+/* css.sty */
 /* This assumes geometric header shrinkage */
 /* Also, it tries to make h2 be 1em */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -95,6 +96,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -epub-hyphens: auto;
   hyphens: auto;
   hyphenate-after: 3;
   hyphenate-before: 3;
@@ -123,7 +125,6 @@ p {
   adobe-hyphenate: none !important; }
 
 .rtl {
-  direction: rtl;
   float: right; }
 
 .drop {
@@ -295,25 +296,28 @@ td:nth-last-child {
   .zebra tr:nth-child(6n-1), .zebra tr:nth-child(6n+0), .zebra tr:nth-child(6n+1) {
     background-color: #cccccc; }
 
-sup {
-  vertical-align: super;
-  font-size: 0.5em;
-  line-height: 0.5em; }
-
-sub {
-  vertical-align: sub;
-  font-size: 0.5em;
-  line-height: 0.5em; }
 
 table.footnote {
   margin: 0.5em 0em 0em 0em; }
 
 .footnote {
   font-size: 0.8em; }
-
+.foonote sup{
+  font-size: 0.9em;
+}
 .footnote-link {
   font-size: 0.8em;
   vertical-align: super; }
+sup {
+  vertical-align: super;
+  font-size: 0.7em;
+  line-height: 0.7em; }
+
+sub {
+  vertical-align: sub;
+  font-size: 0.8em;
+  line-height: 0.8em; }
+
 
 .tocEntry-1 a {
   /* empty */
@@ -470,11 +474,6 @@ table.footnote {
   margin-left: 4em;
   text-indent: -1em; }
 
-@font-face {
-  font-family: Inconsolata Mono;
-  font-style: normal;
-  font-weight: normal;
-  src: url("Inconsolata.otf"); }
 
 .normal-mono {
   font-family: "Courier New", Courier, monospace; }
@@ -484,12 +483,6 @@ tt, pre, .mono {
   font-family: "Inconsolata Mono", "Courier New", Courier, monospace;
   font-style: normal; }
 
-@font-face {
-  font-family: mgopen modata;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.5em;
-  src: url("MgOpenModataRegular.ttf"); }
 
 .modata {
   font-family: "mgopen modata"; }
