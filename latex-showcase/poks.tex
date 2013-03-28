@@ -1,0 +1,31 @@
+\documentclass{article}
+%\usepackage{hyperref} % conflict!
+\usepackage[utf8]{inputenc}
+\usepackage[xindy,original]{imakeidx}
+\usepackage[T1]{fontenc}
+\def\xindyopt{-L czech -M lang/czech/utf8 -M hej}
+\makeindex[options=\xindyopt,title=Rejstřík]
+\makeindex[name=sec,options=\xindyopt,title=Druhý rejstřík]
+%\newcommand\printindex{\input \jobname.ind}
+\begin{document}
+	\let\index\Index
+	\section{Hej hej}
+	start
+	Nunc ligula faucibus \index{vel|textbf}. Nullarutrum porttitor...
+	\index{a}\index{b}\index{ä}\index{z}
+	\index{čau}
+	end
+	\v{t} \v{e} \'{e}
+	\Tag{ind(ojoj)!}{Nazdar}
+	\section{jjj}
+	\index{světe}
+	\index{světe}
+	\index{světe}
+	\index[sec]{světe}
+	\Tag{ind(sss)}{ukk}
+	\index{ale|see{světe}}
+	\printindex
+	\indexprologue{\small Second index, only testing}
+	\printindex[sec]
+	\Ref{ind(ojoj)!}
+\end{document}
