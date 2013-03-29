@@ -16,6 +16,7 @@
 %\patchcmd{\protected@iwrite}{\write}{\immediate\write}{}{}
 \patchcmd{\@Wrindex}{\protected@write}{\protected@iwrite}{}{}
 \let\Index\xIndex
+\let\index\xIndex
 %\show\Index
 \newcommand\@indexanchor{%
 \edef\idx@anch{idx-anch\theindexcnt}%

@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[xindy,original]{imakeidx}
+\usepackage[acronym, toc,numberedsection=nolabel]{glossaries}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\makeindex
+\makeglossaries
+%\newacronym{
+\begin{document}
+	\title{\TeX 4ebook showcase}
+	\author{Michal Hoftich}
+	\maketitle
+	\tableofcontents
+	\section{Hello}
+	\index{index entry!sample}
+	\printglossaries
+	\printbibliography
+	\printindex
+\end{document} 
