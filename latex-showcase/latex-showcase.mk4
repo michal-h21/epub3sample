@@ -1,0 +1,4 @@
+Make:add("xindy", "texindy -L ${lang} -M lang/${lang}/utf8 ${options} ${input}.idx")
+Make:htlatex()
+Make:xindy {lang = "czech", options = "-M hej"}
+Make:htlatex()
