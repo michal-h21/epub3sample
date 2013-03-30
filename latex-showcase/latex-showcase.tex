@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[xindy,original]{imakeidx}
+\usepackage[acronym, toc,numberedsection=nolabel]{glossaries}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\makeindex
+\makeglossaries
+\usepackage[]{url}
+%\newacronym{
+\begin{document}
+	\title{TeX4ebook showcase}
+	\author{Michal Hoftich}
+	\maketitle
+	\tableofcontents
+	\section{Intro}
+
+	This is sample document for%
+	\verb|tex4ebook|\footnote{\url{https://github.com/michal-h21/tex4ebook}}, 
+	showing advanced \LaTeX features like different scripts and languages, 
+	indexing, glossaries, biblatex bibliography and tikz figures.
+	
+	tex4ebook is based on tex4ht, system for converting \LaTeX documents to 
+	various output formats. We use it to convert \LaTeX to xhtml or html5, 
+	and then pack it using lua scripts to epub, epub3 or mobi formats.
+
+	For configuring html and css output of various \LaTeX commands, 
+	we can use custom config file. You can see config file in source code
+	repository of this document%
+	\footnote{\url{https://github.com/michal-h21/epub3sample/blob/master/latex-showcase/epub3.cfg}},
+	
+	
+	\index{index entry!sample}
+	\printglossaries
+	\printbibliography
+	\printindex
+\end{document} 

@@ -1,0 +1,12 @@
+(define-location-class "t4ht-loc" 
+	("arabic-numbers" :sep "/")
+	:hierdepth 1
+)
+(define-attributes (("definition" "default")))
+
+(merge-to "definition" "default" :drop)
+
+(markup-locref :open "\hello{" :close "}" :class "t4ht-loc")
+
+(markup-locref :open "\textbf{\hello{" :close "}}" :class "t4ht-loc" :attr "textbf")
+(markup-locref :open "\textbf{\hello{" :close "}}" :class "t4ht-loc" :attr "definition")
