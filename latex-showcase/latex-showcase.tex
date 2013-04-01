@@ -5,7 +5,7 @@
 \usepackage[xindy,original]{imakeidx}
 \usepackage[acronym, toc,numberedsection=nolabel]{glossaries}
 \usepackage[backend=biber,style=authoryear]{biblatex}
-\makeindex[noautomatic,intoc]
+\makeindex[intoc]
 \makeglossaries
 \usepackage[]{url}
 %\newacronym{
@@ -32,7 +32,10 @@
 	
 	
 	\index{index entry!sample}
+	\section{Second}
+	Hello world
 	\printglossaries
 	\printbibliography
+\AtBeginEnvironment{theindex}{Ahoj, rejstříku \addcontentsline{toc}{section}{\indexname}}
 	\printindex
 \end{document} 
