@@ -9,11 +9,11 @@
 \patchcmd{\xIndex}{\@index}{\@Index}{}{}
 
 \pretocmd{\xIndex}{\@stepindexcnt\@indexanchor}
-%\patchcmd{\index}{\@index}{\@Index}{}{}
-%\patchcmd{\xIndex}{\@index}{\@Index}{}{}
-%\let\protected@iwrite\protected@write
-%\let\@index\@Index
-%\patchcmd{\protected@iwrite}{\write}{\immediate\write}{}{}
+% \patchcmd{\index}{\@index}{\@Index}{}{}
+% \patchcmd{\xIndex}{\@index}{\@Index}{}{}
+% \let\protected@iwrite\protected@write
+% \let\@index\@Index
+% \patchcmd{\protected@iwrite}{\write}{\immediate\write}{}{}
 \patchcmd{\@Wrindex}{\protected@write}{\protected@iwrite}{}{}
 \let\Index\xIndex
 \let\index\xIndex
